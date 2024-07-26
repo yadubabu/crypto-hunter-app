@@ -9,7 +9,6 @@ export const getCoins=async(req:Request,res:Response)=>{
 
 export const coinController=async(req:Request,res:Response)=>{
     const {data}=req.body
-    console.log(data);
     // await coinSchema.find()
    const dbUrl='mongodb+srv://mohini:mohinimohini@cluster0.sqdke.mongodb.net/';
         const client = new MongoClient(dbUrl);
