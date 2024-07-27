@@ -5,8 +5,7 @@ import dotEnv from 'dotenv/config';
 import { Request,Response } from 'express';
 import { connectDB } from './connectDB';
 import coinRouter from './routers/coinRouter';
-// import  coinRouter from './controllers/coinController';
-
+import stockRouter from './routers/stockRouter'
 const app=express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -18,6 +17,7 @@ const port= 5000;
 //     res.send('hello world')
 // })
 app.use('/coins',coinRouter);
+app.use('/exchanges',stockRouter)
 
 app.listen(port,()=>{
     console.log(`Server run on the port ${port}`);
